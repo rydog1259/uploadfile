@@ -16,6 +16,8 @@ if (isset($_post['submit'])) {
   if (in_array($fileActualExt, $allowed)) {
     if ($fileError === 0) {
       if ($filesSize < 5000000) {
+        $fileNameNew = uniqid('', true).".".$
+        $fileDestination = 'uploads/'.$fileNameNew;
     }    else {
             echo "Your files is too big!";
         }
