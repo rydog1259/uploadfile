@@ -18,6 +18,8 @@ if (isset($_post['submit'])) {
       if ($filesSize < 5000000) {
         $fileNameNew = uniqid('', true).".".$
         $fileDestination = 'uploads/'.$fileNameNew;
+        move_uploded_file($fileTmpName, $fileDestination);
+        header("location: index.php?/uploadsucess");
     }    else {
             echo "Your files is too big!";
         }
